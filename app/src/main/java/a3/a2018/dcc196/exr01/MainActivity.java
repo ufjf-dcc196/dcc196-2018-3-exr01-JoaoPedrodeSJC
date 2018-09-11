@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == MainActivity.CADS_ALUNO && resultCode == Activity.RESULT_OK && data != null) {
-            
+        if(requestCode == MainActivity.CADS_ALUNO && resultCode == Activity.RESULT_OK) {
+            txtQuantAluno.setText(ALUNO_QUANTIDADE);
         }
-        if(requestCode == MainActivity.CADS_SERVIDOR && resultCode == Activity.RESULT_OK && data != null) {
-
+        if(requestCode == MainActivity.CADS_SERVIDOR && resultCode == Activity.RESULT_OK) {
+            txtQuantServidor.setText(SERVIDOR_QUANTIDADE);
         }
-        if(requestCode == MainActivity.CADS_EXTERNO && resultCode == Activity.RESULT_OK && data != null) {
-
+        if(requestCode == MainActivity.CADS_EXTERNO && resultCode == Activity.RESULT_OK) {
+            txtQuantExterno.setText(EXTERNO_QUANTIDADE);
         }
     }
 }

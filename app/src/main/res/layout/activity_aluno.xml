@@ -2,11 +2,12 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_aluno_confirma"
         android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -15,15 +16,15 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="confirma"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintVertical_bias="0.982"
+        tools:text="confirma" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txt_aluno_nome"
         android:layout_width="321dp"
         android:layout_height="47dp"
         android:layout_marginEnd="8dp"
@@ -32,15 +33,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txt_aluno_mat"
         android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="344dp"
@@ -50,13 +51,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="Matrícula"
         android:inputType="textPersonName"
-        android:text="Matrícula"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_aluno_nome" />
 
     <TextView
         android:id="@+id/textView2"

@@ -26,6 +26,7 @@ public class ServidorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtServidorNome.getText().toString().isEmpty() && !txtServidorSiape.getText().toString().isEmpty()) {
                     Intent resultado = new Intent();
+                    resultado.putExtra(MainActivity.SERV_SIAPE, txtServidorSiape.getText().toString());
                     setResult(Activity.RESULT_OK, resultado);
                     MainActivity.SERVIDOR_QUANTIDADE = MainActivity.SERVIDOR_QUANTIDADE + 1;
                     finish();

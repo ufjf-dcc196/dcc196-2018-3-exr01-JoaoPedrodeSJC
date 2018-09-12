@@ -24,7 +24,7 @@ public class ServidorActivity extends AppCompatActivity {
         btnServidorConfirma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txtServidorNome.getText()!=null && txtServidorSiape.getText() !=null) {
+                if (!txtServidorNome.getText().toString().isEmpty() && !txtServidorSiape.getText().toString().isEmpty()) {
                     Intent resultado = new Intent();
                     setResult(Activity.RESULT_OK, resultado);
                     MainActivity.SERVIDOR_QUANTIDADE = MainActivity.SERVIDOR_QUANTIDADE + 1;

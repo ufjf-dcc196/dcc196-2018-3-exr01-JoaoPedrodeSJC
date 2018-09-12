@@ -24,7 +24,7 @@ public class ExternoActivity  extends AppCompatActivity {
         btnExternoConfirma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txtExternoNome.getText()!=null && txtExternoNome.getText() !=null) {
+                if (!txtExternoNome.getText().toString().isEmpty() && !txtExternoNome.getText().toString().isEmpty()) {
                     Intent resultado = new Intent();
                     setResult(Activity.RESULT_OK, resultado);
                     MainActivity.EXTERNO_QUANTIDADE = MainActivity.EXTERNO_QUANTIDADE + 1;

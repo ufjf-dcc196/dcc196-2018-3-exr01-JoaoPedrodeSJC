@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnAddAluno,btnAddServidor,btnAddExterno;
     private TextView txtQuantAluno, txtQuantServidor, txtQuantExterno;
     private static final int CADS_ALUNO = 1, CADS_SERVIDOR = 1, CADS_EXTERNO = 1;
+    public static final String PESSOA_NOME = "nome",SERV_SIAPE = "siape",ALUNO_MAT = "matricula",EXT_EMAIL = "email";
     public static int ALUNO_QUANTIDADE = 0, SERVIDOR_QUANTIDADE = 0, EXTERNO_QUANTIDADE = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+/*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -62,5 +63,5 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == MainActivity.CADS_EXTERNO && resultCode == Activity.RESULT_OK) {
             txtQuantExterno.setText(EXTERNO_QUANTIDADE);
         }
-    }
+    }*/
 }

@@ -25,12 +25,16 @@ public class AlunoActivity  extends AppCompatActivity {
         btnAlunoConfirma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txtAlunoMat.getText()!=null && txtAlunoNome.getText() !=null) {
+
+               if (!txtAlunoMat.getText().toString().isEmpty() && !txtAlunoNome.getText().toString().isEmpty()) {
+
                     Intent resultado = new Intent();
+                    resultado.putExtra(MainActivity.ALUNO_MAT, txtAlunoMat.getText().toString());
                     setResult(Activity.RESULT_OK, resultado);
                     MainActivity.ALUNO_QUANTIDADE = MainActivity.ALUNO_QUANTIDADE + 1;
                     finish();
                 }
+
             }
         });
     }

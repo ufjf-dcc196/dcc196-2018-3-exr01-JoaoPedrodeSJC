@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnAddAluno,btnAddServidor,btnAddExterno;
     private TextView txtQuantAluno, txtQuantServidor, txtQuantExterno;
-    private static final int CADS_ALUNO = 1, CADS_SERVIDOR = 1, CADS_EXTERNO = 1;
+    private static final int CADS_ALUNO = 1, CADS_SERVIDOR = 2, CADS_EXTERNO = 3;
     public static final String PESSOA_NOME = "nome",SERV_SIAPE = "siape",ALUNO_MAT = "matricula",EXT_EMAIL = "email";
-    public static int ALUNO_QUANTIDADE = 0, SERVIDOR_QUANTIDADE = 0, EXTERNO_QUANTIDADE = 0;
+    private static int ALUNO_QUANTIDADE = 0, SERVIDOR_QUANTIDADE = 0, EXTERNO_QUANTIDADE = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,12 +55,15 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == MainActivity.CADS_ALUNO && resultCode == Activity.RESULT_OK && data != null) {
+            ALUNO_QUANTIDADE++;
             txtQuantAluno.setText(ALUNO_QUANTIDADE + "");
         }
         if(requestCode == MainActivity.CADS_SERVIDOR && resultCode == Activity.RESULT_OK && data != null) {
+            SERVIDOR_QUANTIDADE++;
             txtQuantServidor.setText(SERVIDOR_QUANTIDADE + "");
         }
         if(requestCode == MainActivity.CADS_EXTERNO && resultCode == Activity.RESULT_OK && data != null) {
+            EXTERNO_QUANTIDADE++;
             txtQuantExterno.setText(EXTERNO_QUANTIDADE + "");
         }
     }

@@ -31,7 +31,6 @@ public class AlunoActivity  extends AppCompatActivity {
                     Intent resultado = new Intent();
                     resultado.putExtra(MainActivity.ALUNO_MAT, txtAlunoMat.getText().toString());
                     setResult(Activity.RESULT_OK, resultado);
-                    MainActivity.ALUNO_QUANTIDADE = MainActivity.ALUNO_QUANTIDADE + 1;
                     finish();
                 }
 

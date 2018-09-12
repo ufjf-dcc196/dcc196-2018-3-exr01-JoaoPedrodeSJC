@@ -28,7 +28,6 @@ public class ServidorActivity extends AppCompatActivity {
                     Intent resultado = new Intent();
                     resultado.putExtra(MainActivity.SERV_SIAPE, txtServidorSiape.getText().toString());
                     setResult(Activity.RESULT_OK, resultado);
-                    MainActivity.SERVIDOR_QUANTIDADE = MainActivity.SERVIDOR_QUANTIDADE + 1;
                     finish();
                 }
             }

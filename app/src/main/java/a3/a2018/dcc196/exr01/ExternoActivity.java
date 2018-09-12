@@ -28,7 +28,6 @@ public class ExternoActivity  extends AppCompatActivity {
                     Intent resultado = new Intent();
                     resultado.putExtra(MainActivity.EXT_EMAIL, txtExternoEmail.getText().toString());
                     setResult(Activity.RESULT_OK, resultado);
-                    MainActivity.EXTERNO_QUANTIDADE = MainActivity.EXTERNO_QUANTIDADE + 1;
                     finish();
                 }
             }
